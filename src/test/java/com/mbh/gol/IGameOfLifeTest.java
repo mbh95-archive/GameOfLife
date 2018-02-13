@@ -8,23 +8,30 @@ public class IGameOfLifeTest {
     private IGameOfLife gol;
 
     @org.junit.Before
-    public void setUp() throws Exception {
+    public void setUp()  {
         gol = new GameOfLife();
     }
 
     @Test
-    public void testCreation() throws Exception {
+    public void testCreation() {
         Assert.assertNotNull(gol);
     }
 
     @Test
-    public void testGetBasic() throws Exception {
+    public void testGeInit() {
         Assert.assertFalse(gol.get(0,0));
     }
 
     @Test
-    public void testSetBasic() throws Exception {
+    public void testSetAlive() {
         gol.set(0,0, true);
         Assert.assertTrue(gol.get(0,0));
+    }
+
+    @Test
+    public void testSetDead() {
+        gol.set(0,0, true);
+        gol.set(0,0, false);
+        Assert.assertFalse(gol.get(0,0));
     }
 }
