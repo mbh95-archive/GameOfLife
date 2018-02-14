@@ -9,7 +9,7 @@ public class GameOfLife implements IGameOfLife {
 
     private Set<Cell> liveCells = new HashSet<>();
 
-    public boolean get(int r, int c) {
+    public boolean test(int r, int c) {
         return liveCells.contains(Cell.create(r, c));
     }
 
