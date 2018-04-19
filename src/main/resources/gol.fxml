@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.layout.*?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mbh.gol.fx.Main">
+    <center>
+        <AnchorPane fx:id="pane" prefHeight="270.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Canvas fx:id="canvas" height="200.0" onMouseDragged="#mouseDragged"
+                        onMousePressed="#mouseDown" onScroll="#onScroll" width="200.0"
+                        AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                        AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <cursor>
+                        <Cursor fx:constant="HAND"/>
+                    </cursor>
+                </Canvas>
+            </children>
+        </AnchorPane>
+    </center>
+    <top>
+        <ToolBar prefHeight="40.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <items>
+                <ToggleButton fx:id="startStopButton" mnemonicParsing="false" onAction="#startStop"
+                              text="Start"/>
+            </items>
+        </ToolBar>
+    </top>
+</BorderPane>

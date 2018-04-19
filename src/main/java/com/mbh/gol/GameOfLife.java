@@ -10,6 +10,10 @@ public class GameOfLife implements IGameOfLife {
 
     private Set<Cell> liveCells = new HashSet<>();
 
+    public Set<Cell> getLiveCells() {
+        return liveCells;
+    }
+
     public boolean test(int r, int c) {
         return liveCells.contains(Cell.create(r, c));
     }
@@ -51,14 +55,14 @@ public class GameOfLife implements IGameOfLife {
     }
 
     @AutoValue
-    static abstract class Cell {
+    public static abstract class Cell {
         static Cell create(int r, int c) {
             return new AutoValue_GameOfLife_Cell(r, c);
         }
 
-        abstract int r();
+        public abstract int r();
 
-        abstract int c();
+        public abstract int c();
 
         private Set<Cell> getNeighbors() {
             Set<Cell> neighborSet = new HashSet<>();

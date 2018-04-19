@@ -18,7 +18,7 @@ public class GameOfLifeTest {
     }
 
     @Test
-    public void testGeInit() {
+    public void testInit() {
         Assert.assertFalse(gol.test(0, 0));
     }
 
